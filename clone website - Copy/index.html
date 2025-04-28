@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAAS PLATEAU - World Heritage Site</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Heritage Header with Logo -->
+  <header class="site-header">
+    <div class="header-content">
+      <div class="logo-section">
+        <h1>KAAS PLATEAU</h1>
+        <p>WORLD HERITAGE SITE</p>
+      </div>
+      <div class="unesco-logos">
+        <img src="images/unesco-logo.png" alt="UNESCO Logo" class="unesco-logo">
+        <img src="images/heritage-logo.png" alt="Heritage Logo" class="heritage-logo">
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Around Kas</a></li>
+        <li><a href="#">Flower Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Booking</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Full Width Slider -->
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide active">
+        <img src="images/kas slider15 oct 24 1.jpg" alt="Kas Plateau">
+      </div>
+      <div class="slide">
+        <img src="images/kas slider15 oct 24 2.jpg" alt="Kas Flowers">
+      </div>
+      <div class="slide">
+        <img src="images/kas slider15 oct 24 3.jpg" alt="Kas Landscape">
+      </div>
+    </div>
+    <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+    <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+    <div class="slider-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container main-content">
+    <h2 class="section-title text-center">Nature of Flora</h2>
+    
+    <!-- Info Boxes Grid -->
+    <div class="info-grid">
+      <!-- Visitor Box -->
+      <div class="info-box visitor-box">
+        <h3>Per day visitor's allocation</h3>
+        <p class="total-visitors">(Total 3000 visitors per day)</p>
+        <ul>
+          <li class="time-green">7.00 am to 11.00 am - 1000 visitors</li>
+          <li class="time-green">11.00 am to 3.00 pm - 1000 visitors</li>
+          <li class="time-red">3.00 pm to 6.00 pm - 1000 visitors<br>(For this slot, reporting time is 3.00 pm to 4.00 pm compulsory)</li>
+        </ul>
+      </div>
+
+      <!-- Routes Box -->
+      <div class="info-box routes-box">
+        <h3>How to reach</h3>
+        <ul>
+          <li>Kas Via Satara - <a href="#" class="route-link">Click Here</a></li>
+          <li>Kas Via Shendre - <a href="#" class="route-link">Click Here</a></li>
+          <li>Kas Via Pachawad-Kudal - <a href="#" class="route-link">Click Here</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Box -->
+      <div class="info-box contact-box">
+        <h3>Contact Person</h3>
+        <ul>
+          <li>Somnath Jadhav: 9422592035</li>
+          <li>Dattatray S. Kirdat: 8698993553</li>
+          <li>Dnyaneshwar Akhade: 8600523113</li>
+          <li>Vitthal Kadam: 8459876484</li>
+          <li>Ramchandra Umbarkar: 9422608996</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Image Info Grid -->
+    <div class="image-grid">
+      <div class="image-box">
+        <img src="images/11.jpg" alt="Kas Lake">
+        <p>25 Km away from Satara District H.Q. & 20 Km away from Northern part of Koyana Sanctuary. Locally called as 'Kas Pathar' or 'Plateau of Flowers'.</p>
+      </div>
+      <div class="image-box">
+        <img src="images/28.jpg" alt="Kas Flowers">
+        <p>Elements of outstanding Universal Values are found on this Plateau, making it rich into Biodiversity. Many species which are still new to the Botanical Science are observed on plateau.</p>
+      </div>
+      <div class="image-box">
+        <img src="images/30.jpg" alt="Kas Landscape">
+        <p>Out of the 624 flowering species, 39 species are found in the Kas Region only. It is approximately 6% of Red data species.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="contact-info">
+        <h4>Contact:</h4>
+        <p>Kas Pathar Office - 8689861851, 7028461298, 7499612940, 8380000837, 8379086732</p>
+        <p>Mail ID - <a href="mailto:info@kas.ind.in">info@kas.ind.in</a></p>
+      </div>
+      <p class="browser-support">This Website functions best with latest web browsers like Chrome, Opera.</p>
+      <p class="copyright">&copy; Copyright 2023, kas.ind.in</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Slider functionality
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+
+    function showSlide(n) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[n].classList.add('active');
+      dots[n].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Auto advance slides
+    setInterval(nextSlide, 5000);
+
+    // Event listeners
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+      });
+    });
+  </script>
+</body>
+</html> 
